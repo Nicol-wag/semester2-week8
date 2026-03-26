@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifndef _STRUCTURE_H_
+#define _NUM_MODULES_H_
+
 #define NAME_LENGTH 50
 #define NUM_MODULES 3
 
