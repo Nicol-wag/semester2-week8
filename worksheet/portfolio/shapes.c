@@ -48,9 +48,30 @@ float triangleArea( Triangle t ) {
 
 
 bool samePoint( Point p1, Point p2 ) {
-    Line l = 
+    Line l = makeLine(p1, p2);
+    float distance = lineLength(l);
+    if (distance < 1.0e-6) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
+bool pointInLine( Point p, Line l) {
+    if (samePoint(p, l.p[0]) || samePoint(p, l.p[1])) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool pointInTriangle( Point p, Triangle t ) {
+    if (samePoint(p, t.p[0]) || samePoint(p, t.p[1]) || samePoint(p, t.p[2])) {
+        return true;
+    } else {
+        return false;
+    }
+}
 // complete other functions below
 // - start with stubs as above
 // - compile regularly to test syntax
